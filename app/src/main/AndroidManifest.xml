@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.coolweather.com.coolweather">
 
+    <!-- 声明权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
@@ -20,9 +23,11 @@
 
         <!-- 要注册一下 -->
         <activity android:name=".WeatherActivity" />
-    </application>
 
-    <!-- 声明权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+        <service
+            android:name=".service.AutoUpdateService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
 
 </manifest>
