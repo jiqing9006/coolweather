@@ -17,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 要注册一下 -->
+        <activity android:name=".WeatherActivity" />
     </application>
 
     <!-- 声明权限 -->
